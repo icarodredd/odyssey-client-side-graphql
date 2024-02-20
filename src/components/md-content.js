@@ -6,14 +6,14 @@ import ReactMarkdown from 'react-markdown';
 /**
  * Markdown component is a simple style wrapper for markdown content used across our app
  */
-const MarkDown: React.FC<{ content?: string | null }> = ({ content }) => {
+const MarkDown = ({ content }) => {
   return <StyledMarkdown children={content} />;
 };
 
 export default MarkDown;
 
 /** Markdown styled components */
-const StyledMarkdown = styled(ReactMarkdown as any)({
+const StyledMarkdown = styled(ReactMarkdown)({
   color: colors.grey.darker,
 
   h1: {
