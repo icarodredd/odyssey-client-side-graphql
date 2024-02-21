@@ -30,10 +30,6 @@ const TRACKS = gql(`
 const Tracks = () => {
   const { loading, error, data } = useQuery(TRACKS);
 
-  if (loading) return "Loading...";
-
-  if (error) return `Error! ${error.message}`;
-
   return (
     <Layout grid>
       <QueryResult error={error} loading={loading} data={data}>
