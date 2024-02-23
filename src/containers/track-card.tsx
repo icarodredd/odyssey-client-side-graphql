@@ -79,6 +79,7 @@ const CardContainer = styled(Link)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
+  textDecoration: "none",
   [mq[0]]: {
     width: "90%",
   },
