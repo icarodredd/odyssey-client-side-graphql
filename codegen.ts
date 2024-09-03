@@ -8,6 +8,7 @@ const config: CodegenConfig = {
       preset: "client",
     },
   },
+  ignoreNoDocuments: true,
 };
 
 export default config;
