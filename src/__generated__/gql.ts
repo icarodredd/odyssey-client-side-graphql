@@ -13,6 +13,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
+    "\nquery GetTrack($trackId: ID!) {\n  track(id: $trackId) {\n    id\n    title\n    author {\n      id\n      name\n      photo\n    }\n    thumbnail\n    length\n    modulesCount\n    description\n    numberOfViews\n    modules {\n      id\n      title\n      length\n      content\n      videoUrl\n    }\n  }\n}\n": types.GetTrackDocument,
     "\n  query GetTracks {\n    tracksForHome {\n      id\n      title\n      thumbnail\n      length\n      modulesCount\n      author {\n        id\n        name\n        photo\n      }\n    }\n  }\n": types.GetTracksDocument,
 };
 
@@ -30,6 +31,10 @@ const documents = {
  */
 export function graphql(source: string): unknown;
 
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\nquery GetTrack($trackId: ID!) {\n  track(id: $trackId) {\n    id\n    title\n    author {\n      id\n      name\n      photo\n    }\n    thumbnail\n    length\n    modulesCount\n    description\n    numberOfViews\n    modules {\n      id\n      title\n      length\n      content\n      videoUrl\n    }\n  }\n}\n"): (typeof documents)["\nquery GetTrack($trackId: ID!) {\n  track(id: $trackId) {\n    id\n    title\n    author {\n      id\n      name\n      photo\n    }\n    thumbnail\n    length\n    modulesCount\n    description\n    numberOfViews\n    modules {\n      id\n      title\n      length\n      content\n      videoUrl\n    }\n  }\n}\n"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
